@@ -3,19 +3,75 @@ body {
     background-color: black;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding: 0.2em 0.4em;
+    box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.moon {
+    rotate: -30deg;
+    font-size: 1.6em;
+}
+
+.web-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+}
+
+.star {
+    font-size: 1.4em;
+}
+
+nav {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a {
+    margin: 0 0.6em;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 #poetries {
     margin: 0.6em;
     padding: 1em;
     display: grid;
     grid-gap: 0.6em;
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 25em));
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));;
+    /* grid-template-columns: repeat(auto-fit, minmax(15em, 25em)); */
     background-color: #121212;
     border-radius: 1%;
 }
 
+@media (max-width: 650px) {
+    #poetries {
+        grid-template-columns: 1fr;
+    }
+}
+
 .poetry-section {
-    border-radius: 1%;
+    height: min-content;
+    border-radius: 0.4em;
     padding: 1em;
     line-height: 1.2em;
     text-align: center;
@@ -24,15 +80,21 @@ body {
 }
 
 .poetry-image img {
+    border-radius: 0.4em;
     max-width: 100%;
     max-height: 100%;
 }
 
 .poetry-title {
-
+    font-family: cursive;
+    font-size: 1.4em;
 }
-.poetry {
 
+.poetry {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.4em;
 }
 
 .poetry-detail {
